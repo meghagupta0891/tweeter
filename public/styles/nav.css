@@ -1,0 +1,32 @@
+nav {
+    height : 80px;
+    display:flex;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    justify-content:space-between;
+    width:100%;
+    top:0;
+    position: sticky;  
+}
+#write-new-tweet {
+  margin: 1em;
+  font-size: 16px;
+  font-family: 'Times New Roman';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+nav span {
+  margin:1em;
+  font-family: Bungee;
+}
+nav i {
+  color: red;
+}
+@media only screen and (max-width: 720px) {
+  nav {
+    background-color: #b86500;
+    background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+  }
+}

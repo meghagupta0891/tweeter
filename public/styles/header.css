@@ -1,0 +1,30 @@
+.main-header {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b86500;
+    background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+    margin: 60px;
+    height: 350px;
+
+}
+.main-header img {
+    height: 230px;
+}
+
+.main-header h2 {
+    font-family: 'Times New Roman';
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 720px) {
+    .main-header {
+        height: 300px;
+        width: 100%;
+        justify-content:center;
+        margin:0px;
+    }
+}
+

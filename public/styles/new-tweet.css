@@ -1,0 +1,41 @@
+.new-tweet label {
+    font-weight: bold;
+}
+.bottom-new-tweet{
+    font-family: Bungee;
+    margin-top:20px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.new-tweet button {
+    background-color: #2e0a5c;
+    color: #FFFFFF;
+    padding: 3px 3px 3px 3px;
+    font-size:large;
+}
+
+#tweet-text {
+  background: transparent;
+  border: 0 none;
+  width: 100%;
+  resize:none;
+  outline: none;
+  border-bottom: 3px solid black;
+}
+
+.red-counter {
+    color: #FF0000;
+}
+.create-tweet-error {
+    display:flex;
+    align-items : left;
+    justify-content: start;
+    border : 2px solid red;
+}
+.create-tweet-error i {
+    color:red;
+    margin-left:20px;
+    margin-right:20px;
+}

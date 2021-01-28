@@ -2,28 +2,73 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+    <title>Tweeter - Home Page</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+   
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,700&display=swap" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/timeAgo.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div id="write-new-tweet">
+        <div><b>Write </b> a new tweet</div>
+        <i class="fa fa-angle-double-down"></i>
+      </div>
     </nav>
-
+    <div id="main-tweet-body">
+      <header class="main-header">
+        <div class="avatar">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2>Megha</h2>
+      </div>
+    </header>
+    
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <!-- Create a new tweet -->
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <div class="create-tweet-error">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span id="create-tweet-error-message"></span>
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+        <form id="create-tweet" method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <br>
+          <div class="bottom-new-tweet">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section> 
+      <!--List of tweets-->
+      <div id="tweets-container"></div> 
+    </main>
+    </div>
   </body>
 </html>
